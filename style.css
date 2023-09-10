@@ -1,0 +1,82 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #0984e3;
+}
+.wrapper{
+  width: 200px;
+  height: 200px;
+}
+.box{
+  animation: animate 10s ease-in-out infinite;
+  transform-origin: 100px 100px 0;
+  transform-style: preserve-3d;
+}
+@keyframes animate {
+  from,to{
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16%{
+    transform: rotateY(-90deg);
+  }
+  33%{
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  50%{
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66%{
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83%{
+    transform: rotateX(90deg);
+  }
+}
+.box div{
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+}
+.box .box1{
+  background-image: url("images/mount01.jpg");
+  background-size: cover;
+  background-position: center center;
+  transform: translateZ(100px);
+}
+.box .box2{
+  background-image: url("images/blue01.jpg");
+  background-size: cover;
+  background-position: center center;
+  transform: rotateY(90deg) translateZ(100px);
+}
+.box .box3{
+  background-image: url("images/pink01.jpg");
+  background-size: cover;
+  background-position: center center;
+  transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+}
+.box .box4{
+  background-image: url("images/child.jpg");
+  background-size: cover;
+  background-position: center center;
+  transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+}
+.box .box5{
+  background-image: url("images/Pink07.jpg");
+  background-size: cover;
+  background-position: center center;
+  transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+}
+.box .box6{
+  background-image: url("images/Rose01.jpg");
+  background-size: cover;
+  background-position: center center;
+  transform: rotateX(-90deg) translateZ(100px);
+}
